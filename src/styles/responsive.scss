@@ -1,0 +1,15 @@
+// Set width for mobile and tablet
+$mobile-width: 600px;
+$tablet-width: 1024px;
+
+@mixin mobile {
+    @media screen and (max-width: $mobile-width) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width: $tablet-width) {
+        @content;
+    }
+}

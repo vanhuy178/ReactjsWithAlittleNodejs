@@ -1,0 +1,129 @@
+@import '../../styles/heading-title.scss';
+@import '../../styles/responsive.scss';
+
+.login-background {
+  background: linear-gradient(135deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+  height: 100vh;
+  position: relative;
+
+
+  .login-container {
+    width: 400px;
+    height: 500px;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: white;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    border: 1px solid white;
+
+    @include mobile {
+      width: 370px;
+    }
+
+
+    .login-input {
+      margin: 5px 0;
+    }
+
+    .form-group label {
+      text-transform: capitalize;
+      padding: 10px 0;
+
+      @include mobile {
+        padding: 5px 0;
+      }
+
+    }
+
+    .custom-input-password input[type=password]::-ms-reveal,
+    .custom-input-password input[type=password]::-ms-clear {
+      display: none;
+    }
+
+    .custom-input-password {
+      position: relative;
+
+    }
+
+    .custom-input-password i {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+
+    .btn-login {
+      width: 100%;
+      text-transform: uppercase;
+      margin: 10px 0;
+      padding: 10px 0;
+      border: 0;
+      outline: none;
+      border-radius: 50px;
+      background: linear-gradient(135deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+      color: white;
+      transform: scale(1);
+      transition: transform .5s ease;
+
+      @include mobile {
+
+        width: 100%;
+        margin: 5px auto;
+        padding: 5px 0;
+      }
+    }
+
+    .btn-login:hover {
+      transform: scale(1.02);
+    }
+  }
+
+  .fogot-password,
+  .login-with {
+    font-size: 12px;
+  }
+
+  .login-with {
+    text-align: center;
+    text-transform: capitalize;
+
+    .login-icons i {
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      border-radius: 50%;
+      color: white;
+      font-size: 30px;
+      margin: 10px 10px 0;
+      transform: scale(1);
+      transition: transform .5s ease;
+
+      @include mobile {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 19px;
+      }
+    }
+
+    .login-icons i:first-child {
+      background-color: blue;
+    }
+
+    .login-icons i:last-child {
+      background-color: red;
+    }
+
+    .login-icons i:hover {
+      transform: scale(1.2);
+    }
+  }
+
+
+}
